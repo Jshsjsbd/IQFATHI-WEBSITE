@@ -46,10 +46,12 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex; /* جعل العناصر في القائمة أفقية */
+    flex-wrap: wrap; /* يسمح للعناصر بالتفاف إذا كانت الشاشة صغيرة */
+    justify-content: center; /* توسيط العناصر */
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -121,7 +123,11 @@ footer {
 }
 
 @media (max-width: 600px) {
+    nav ul {
+        flex-direction: row; /* تأكد من أن العناصر تظل في صف واحد */
+    }
+
     .section {
-        width: 90%; /* جعل الأقسام أكثر توافقًا مع الأجهزة الصغيرة */
+        width: 100%; /* اجعل الأقسام تأخذ كامل عرض الشاشة */
     }
 }
